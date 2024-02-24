@@ -7,13 +7,14 @@
 </head>
 <body>
     <form action="{% url 'savedata' %}" method="post">
-        <label for="">Name</label>
+        {% csrf_token %}
+        <label for="">Name:</label>
         <input type="text" name="name"><br>
-        <label for="">Email</label>
+        <label for="">Email:</label>
         <input type="text" name="email"><br>
-        <label for="">Course</label>
+        <label for="">Course:</label>
         <input type="text" name="course"><br>
-        <label for="">Fees</label>
+        <label for="">Fees:</label>
         <input type="text" name="fees"><br>
         <button>submit</button>
 
